@@ -1,0 +1,69 @@
+#### BEGINNER NOTEBOOK HINTS EXERCISES 1-7 ####
+
+# Full solutions will be posted at the end of the session. 
+
+# Exercise 1:
+# here is how to initialize a single qubit pauli operation
+pauli_op = Pauli('I')
+# the pauli class has the built in method to_matrix() to print its corresponding matrix
+
+# Extra: Why is the dimensions of a 3-qubit pauli operation an 8x8 matrix? (review tensor product of matrices)
+# https://quantum.cloud.ibm.com/docs/en/api/qiskit/qiskit.quantum_info.Pauli
+
+# Exercise 2:
+# you can initialize a quantum circuit like this where the first parameter is the number of qubits
+# 3 qubit circuit
+qc = QuantumCircuit(3)
+
+# you can apply a gate to the circuit like this
+# not gate applied the the first qubit
+qc.x(1)
+# you can view the dirac notation of a circuit by initializing a Statevector object
+# and then running the draw method on it
+# https://quantum.cloud.ibm.com/docs/en/api/qiskit/qiskit.quantum_info.Statevector 
+
+
+# Exercise 3:
+# the hardest part of this problem is determining what value to use for theta
+
+# sin(θ/2) is equal to the square root of the probability of measuring state 1 (in our case 85.4%)
+# sin(θ/2) = sqrt(.854)
+# now try solving for θ and then passing it as the rotation angle for your ry gate 
+
+
+# Exercise 4:
+# the bell state is considered the "Hello World!" of quatum circuits
+# https://quantum.cloud.ibm.com/docs/en/tutorials/hello-world
+# you can draw a QC using qc.draw("mpl")
+
+
+# Exercise 5:
+# Greenberger–Horne–Zeilinger (GHZ) state is an entangled quantum state that involves at least qubits
+# https://en.wikipedia.org/wiki/Greenberger%E2%80%93Horne%E2%80%93Zeilinger_state 
+# For 3 qubits it is very similar to the bell state with an additional control not gate between
+# the 0 and 2 qubit
+
+# Extra: Can you print the probabilities of this vector? How would you explain these probabilities given that all of the qubits are entangled?
+
+
+# Exercise 6: 
+# We saw an introduction to dynamic quantum circuits with Alberto yesterday!
+# Here is your chance to code some basic dynamic circuit logic.
+
+# to create a circuit with a classical bit populate the second parameter of the QC initialization
+# ex. 2 qubits, 1 classical bit
+qc = QuantumCircuit(2, 1)
+
+# you can measure a qubit to a classical register like this 
+# ex. qubit 0 is measured and the results are stored in classical bit 0
+qc.measure(0, 0)
+
+# if_test() docs
+# https://quantum.cloud.ibm.com/docs/en/guides/classical-feedforward-and-control-flow
+
+
+# Exercise 7: 
+# Now it time to get results from circuits we build!
+# Here are some example docs on running the Sampler using the AerSimulator backend
+# https://quantum.cloud.ibm.com/docs/en/guides/simulate-with-qiskit-aer
+
