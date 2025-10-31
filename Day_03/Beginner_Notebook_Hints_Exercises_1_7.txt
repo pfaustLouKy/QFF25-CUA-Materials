@@ -32,13 +32,13 @@ qc.x(1)
 
 
 # Exercise 4:
-# the bell state is considered the "Hello World!" of quatum circuits
+# the bell state is considered the "Hello World!" of quantum circuits
 # https://quantum.cloud.ibm.com/docs/en/tutorials/hello-world
 # you can draw a QC using qc.draw("mpl")
 
 
 # Exercise 5:
-# Greenberger–Horne–Zeilinger (GHZ) state is an entangled quantum state that involves at least qubits
+# Greenberger–Horne–Zeilinger (GHZ) state is an entangled quantum state that involves at least 3 qubits
 # https://en.wikipedia.org/wiki/Greenberger%E2%80%93Horne%E2%80%93Zeilinger_state 
 # For 3 qubits it is very similar to the bell state with an additional control not gate between
 # the 0 and 2 qubit
@@ -67,3 +67,10 @@ qc.measure(0, 0)
 # Here are some example docs on running the Sampler using the AerSimulator backend
 # https://quantum.cloud.ibm.com/docs/en/guides/simulate-with-qiskit-aer
 
+
+# Bonus!
+# Exercise 19:
+# For this exercise you have the opportunity to run a bell state on real quantum hardware.
+# Please see these resources to create an IBM Cloud account and create an api key. 
+# https://quantum.cloud.ibm.com/docs/en/guides/cloud-setup 
+# https://quantum.cloud.ibm.com/docs/en/guides/instances#add-instance 
